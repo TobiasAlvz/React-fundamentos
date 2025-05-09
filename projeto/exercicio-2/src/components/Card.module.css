@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #e3edf4;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: auto;
+  gap: 24px;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  width: 250px;
+  height: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.poster {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.buyButton {
+  background-color: #111;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.buyButton:hover {
+  background-color: #333;
+}
