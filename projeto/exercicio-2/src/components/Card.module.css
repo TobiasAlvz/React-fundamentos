@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -41,7 +48,7 @@
   line-height: 1.6;
 }
 
-.buyButton {
+button {
   background-color: #111;
   color: white;
   padding: 12px 24px;
@@ -50,10 +57,10 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
-.buyButton:hover {
+button:hover {
   background-color: #333;
 }

@@ -1,10 +1,15 @@
+
 import Card from "./components/card";
 
 function App() {
   return (
-    <div>
+    <>
+      <h1>Exercicio 2</h1>
       <Card />
-    </div>
+      <Card />
+      <Card />
+  
+    </>
   );
 }
 
