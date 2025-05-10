@@ -1,4 +1,4 @@
 
-export default function Button() {
-  return <button>Comprar agora</button>;
+export default function Button(props) {
+  return <button>{props.text}</button>;
 }
