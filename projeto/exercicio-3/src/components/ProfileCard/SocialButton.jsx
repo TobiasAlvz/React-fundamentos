@@ -1,12 +1,13 @@
 import styles from "./ProfileCard.module.css";
 
-export default function SocialButton({ href, label }) {
+export default function SocialButton({ href, label, className, onClick }) {
   return (
     <a
       href={href}
-      className={styles.SocialButton}
+      className={className}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onClick}
     >
       {label}
     </a>

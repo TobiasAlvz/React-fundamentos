@@ -2,6 +2,7 @@ import ContactInfo from "./ContactInfo";
 import styles from "./ProfileCard.module.css";
 import ProfileImage from "./ProfileImage";
 import ProfileInfo from "./ProfileInfo";
+import SocialButtons from "./SocialButtons";
 
 export default function ProfileCard({
   name,
@@ -20,7 +21,7 @@ export default function ProfileCard({
         <ProfileInfo name={name} jobTitle={jobTitle} />
         <ContactInfo phone={phone} email={email} />
         <SocialButtons
-          githubUrl={githubUrl}
+          githubUrl= {githubUrl}
           linkedinUrl={linkedinUrl}
           twitterUrl={twitterUrl}
           styles={styles}

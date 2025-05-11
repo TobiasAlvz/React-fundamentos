@@ -1,5 +1,5 @@
-import SocialButton from "./SocialButton";
 import styles from "./ProfileCard.module.css";
+import SocialButton from "./SocialButton";
 
 export default function SocialButtons({ githubUrl, linkedinUrl, twitterUrl }) {
   return (
@@ -13,6 +13,7 @@ export default function SocialButtons({ githubUrl, linkedinUrl, twitterUrl }) {
         href={linkedinUrl}
         label="LinkedIn"
         className={`${styles.btn} ${styles.linkedin}`}
+        onClick={() => alert("Chupa")}
       />
       <SocialButton
         href={twitterUrl}
