@@ -1,5 +1,7 @@
+import ContactInfo from "./ContactInfo";
 import styles from "./ProfileCard.module.css";
-
+import ProfileImage from "./ProfileImage";
+import ProfileInfo from "./ProfileInfo";
 
 export default function ProfileCard({
   name,
@@ -14,38 +16,15 @@ export default function ProfileCard({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
-        <img src={imageUrl} alt={name} className={styles.profileImage} />
-        <h2 className={styles.name}>{name}</h2>
-        <p className={styles.description}>{jobTitle}</p>
-        <p className={styles.phone}>{phone}</p>
-        <p className={styles.email}>{email}</p>
-
-        <div className={styles.socialButtons}>
-          <a
-            href={githubUrl}
-            className={`${styles.btn} ${styles.github}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href={linkedinUrl}
-            className={`${styles.btn} ${styles.linkedin}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            href={twitterUrl}
-            className={`${styles.btn} ${styles.twitter}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>
-        </div>
+        <ProfileImage src={imageUrl} alt={name} />
+        <ProfileInfo name={name} jobTitle={jobTitle} />
+        <ContactInfo phone={phone} email={email} />
+        <SocialButtons
+          githubUrl={githubUrl}
+          linkedinUrl={linkedinUrl}
+          twitterUrl={twitterUrl}
+          styles={styles}
+        />
       </div>
     </div>
   );
