@@ -20,6 +20,12 @@ export default function SocialButtons({ githubUrl, linkedinUrl, twitterUrl }) {
         label="Twitter"
         className={`${styles.btn} ${styles.twitter}`}
       />
+      <SocialButton
+        href={twitterUrl}
+        label="Follow"
+        className={`${styles.btn} ${styles.twitter}`}
+        toggleFollow={true} 
+      />
     </div>
   );
 }
