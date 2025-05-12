@@ -1,0 +1,23 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #1e1e1e;
+  color: white;
+  font-family: sans-serif;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
