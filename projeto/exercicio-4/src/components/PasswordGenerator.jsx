@@ -6,12 +6,13 @@ import styles from "./PasswordGenerator.module.css";
 export default function PasswordGenerator() {
   const [senha, setSenha] = useState("");
   const [copiado, setCopiado] = useState(false);
+  const [customizada, setCustomizada] = useState(true); 
   const [passwordSize, setPasswordSize] = useState(12);
-  function gerarSenha() {
+  function gerarSenha(tamanho) {
     const caracteres =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*()_-=+";
     let senha = "";
-    for (let i = 0; i < passwordSize; i++) {
+    for (let i = 0; i < tamanho; i++) {
       const index = Math.floor(Math.random() * caracteres.length);
       senha += caracteres[index];
     }
@@ -19,7 +20,8 @@ export default function PasswordGenerator() {
   }
 
   const gerar = () => {
-    const nova = gerarSenha(Number(passwordSize));
+    const tamanho = customizada ? passwordSize : 8; 
+    const nova = gerarSenha(Number(tamanho));
     setSenha(nova);
     setCopiado(false);
   };
@@ -32,13 +34,25 @@ export default function PasswordGenerator() {
   return (
     <>
       <div className={styles.buttons}>
-        <input
-          type="number"
-          id="passwordSize"
-          min={1}
-          value={passwordSize}
-          onChange={(ev) => setPasswordSize(ev.target.value)}
-        />
+        <label>
+          <input
+            type="checkbox"
+            checked={customizada}
+            onChange={() => setCustomizada((prev) => !prev)}
+          />
+          Usar senha customizada
+        </label>
+
+        {customizada && (
+          <input
+            type="number"
+            id="passwordSize"
+            min={1}
+            value={passwordSize}
+            onChange={(ev) => setPasswordSize(Number(ev.target.value))}
+          />
+        )}
+
         <button className={styles.button} onClick={gerar}>
           Gerar!
         </button>
